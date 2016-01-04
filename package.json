@@ -1,0 +1,25 @@
+{
+  "name": "thenable-utils",
+  "version": "0.0.0",
+  "description": "Utilities to help the creation of thenable objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piranna/thenable-utils.git"
+  },
+  "keywords": [
+    "promise",
+    "thenable",
+    "success",
+    "failure"
+  ],
+  "author": "Jesús Leganés Combarro 'piranna' <piranna@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piranna/thenable-utils/issues"
+  },
+  "homepage": "https://github.com/piranna/thenable-utils#readme"
+}
