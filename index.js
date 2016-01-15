@@ -1,3 +1,20 @@
+/**
+ * Utilities to help the creation of thenable objects
+ */
+
+/**
+ * Factory fur `success` functions
+ *
+ * Create a `success` function inside your {Promise} resolver and later call it
+ * when it resolve successfully.
+ *
+ * @param {Function} resolve
+ * @param {Function} reject
+ * @param {Function} [onFulfilled]
+ * @param {*} [thisArg]
+ *
+ * @return {Function}
+ */
 function success(resolve, reject, onFulfilled, thisArg)
 {
   return function(result)
@@ -16,6 +33,18 @@ function success(resolve, reject, onFulfilled, thisArg)
   }
 }
 
+/**
+* Factory fur `failure` functions
+*
+* Create a `failure` function inside your {Promise} resolver and later call it
+* when it resolve with a failure.
+*
+* @param {Function} reject
+* @param {Function} [onRejected]
+* @param {*} [thisArg]
+*
+* @return {Function}
+ */
 function failure(reject, onRejected, thisArg)
 {
   return function(result)
