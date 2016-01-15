@@ -35,5 +35,22 @@ function failure(reject, onRejected, thisArg)
 }
 
 
+/**
+ * Generic `Promise.catch()` method
+ *
+ * It delegate its functionality on the `then()` of the object where it's
+ * applied, both directly or on its class definition prototype
+ *
+ * @param {Function} [onRejected]
+ *
+ * @return {Promise}
+ */
+function catch(onRejected)
+{
+  return this.then(null, onRejected)
+}
+
+
 exports.success = success
 exports.failure = failure
+exports.catch   = catch
