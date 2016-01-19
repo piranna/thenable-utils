@@ -74,7 +74,7 @@ function failure(reject, onRejected, thisArg)
  *
  * @return {Promise}
  */
-function catch(onRejected)
+function promiseCatch(onRejected)
 {
   return this.then(null, onRejected)
 }
@@ -82,4 +82,4 @@ function catch(onRejected)
 
 exports.success = success
 exports.failure = failure
-exports.catch   = catch
+exports.catch   = promiseCatch

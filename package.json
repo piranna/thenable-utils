@@ -4,7 +4,7 @@
   "description": "Utilities to help the creation of thenable objects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/piranna/thenable-utils/issues"
   },
-  "homepage": "https://github.com/piranna/thenable-utils#readme"
+  "homepage": "https://github.com/piranna/thenable-utils#readme",
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  }
 }
