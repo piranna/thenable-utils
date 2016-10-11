@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/piranna/thenable-utils#readme",
   "devDependencies": {
-    "mocha": "^2.3.4"
+    "mocha": "^3.1.2"
   }
 }
