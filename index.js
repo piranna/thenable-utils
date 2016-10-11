@@ -39,27 +39,29 @@ function success(resolve, reject, onFulfilled, thisArg)
 * Create a `failure` function inside your {Promise} resolver and later call it
 * when it resolve with a failure.
 *
+* @param {Function} resolve
 * @param {Function} reject
 * @param {Function} [onRejected]
 * @param {*} [thisArg]
 *
 * @return {Function}
  */
-function failure(reject, onRejected, thisArg)
+function failure(resolve, reject, onRejected, thisArg)
 {
   return function(result)
   {
-    if(onRejected)
-      try
-      {
-        result = onRejected.call(thisArg, result)
-      }
-      catch(exception)
-      {
-        return reject(exception)
-      }
+    if(!onRejected) return reject(result)
 
-    reject(result)
+    try
+    {
+      result = onRejected.call(thisArg, result)
+    }
+    catch(exception)
+    {
+      return reject(exception)
+    }
+
+    resolve(result)
   }
 }
 

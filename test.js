@@ -45,14 +45,14 @@ describe('failure', function()
 {
   it('plain reject', function(done)
   {
-    var failure = thenableUtils.failure(done)
+    var failure = thenableUtils.failure(null, done)
 
     failure()
   })
 
   it('onRejected', function(done)
   {
-    var failure = thenableUtils.failure(done, noop)
+    var failure = thenableUtils.failure(done, null, noop)
 
     failure()
   })
@@ -61,7 +61,7 @@ describe('failure', function()
   {
     var expected = 'asdf'
 
-    var failure = thenableUtils.failure(function(e)
+    var failure = thenableUtils.failure(null, function(e)
     {
       assert.deepStrictEqual(e, expected)
 
